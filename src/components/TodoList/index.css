@@ -1,4 +1,6 @@
-.todolist {
+.title {
+    font-weight: 900;
+    font-size: 4rem;
 }
 
 .todolist__items {

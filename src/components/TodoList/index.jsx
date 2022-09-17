@@ -1,4 +1,5 @@
 import './index.css'
+import { TodoListItem } from './item'
 
 /**
  * TODO List
@@ -6,7 +7,9 @@ import './index.css'
 export default function TodoList() {
   return (
     <div className="todolist">
-      <h1>TODO LIST</h1>
+      <h1 className="title">Todo List</h1>
+
+      <TodoListItem id={1} name={'Test'} onClickDelete={() => {}} />
     </div>
   )
 }
