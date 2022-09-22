@@ -7,7 +7,7 @@ export const TodoListInputForm = ({ onSubmit, isLoading }) => {
 
   return (
     <form
-      data-testid={`todo-input`}
+      data-testid={`todo-form`}
       className="form"
       onSubmit={(e) => {
         e.preventDefault()
@@ -15,13 +15,18 @@ export const TodoListInputForm = ({ onSubmit, isLoading }) => {
       }}
     >
       <input
+        data-testid={'todo-input'}
         onChange={(e) => setText(e.target.value)}
         value={text}
         className="form__input"
         placeholder="Task name"
         disabled={isLoading}
       />
-      <button className="form__submit" disabled={isLoading || !text}>
+      <button
+        data-testid="todo-input-submit"
+        className="form__submit"
+        disabled={isLoading || !text}
+      >
         Add
       </button>
     </form>

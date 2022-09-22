@@ -14,6 +14,7 @@ export default function TodoList() {
         onSubmit={(text) => console.log(text)}
         isLoading={false}
       />
+
       <div className="todolist__items">
         <TodoListItem id={1} name={'Test'} onClickDelete={() => {}} />
       </div>
