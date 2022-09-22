@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.item__name {
+  font-weight: bold;
+  flex: 1;
+  text-align: left;
+}
+
+.item__delete {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background: none;
+  border-radius: 0.2rem;
+}
+
+.item:hover .item__delete {
+  background: #FFBDAD;
+}
+
