@@ -1,0 +1,38 @@
+.form {
+  display: flex;
+}
+
+.form__input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  flex: 3;
+  border: solid 2px #42526E;
+  outline: none;
+}
+
+.form__input:hover {
+  opacity: 0.8;
+}
+.form__input:focus {
+  border-color: #091E42;
+}
+
+.form__submit {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  
+  margin-left: 0.5rem;
+  border: none;
+  outline: none;
+
+  background-color: #6554C0;
+  border: solid 2px #6554C0;
+
+  color: white;
+  font-weight: bold;
+}
+
+.form__submit:hover {
+  opacity: 0.8;
+}
