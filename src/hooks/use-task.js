@@ -17,6 +17,10 @@ export const useTaskDelete = () => {
   const fetchData = useMutation()
   return {
     ...fetchData,
-    mutate: (id) => fetchData.mutate(`/tasks/${id}`, { method: 'DELETE' }),
+    mutate: (id) => {
+      fetchData.mutate(`/tasks/${id}`, {
+        method: 'DELETE',
+      })
+    },
   }
 }

@@ -27,12 +27,20 @@ export const useFetch = () => {
       .then((json) => {
         setData(json)
         setError(null)
+        if (options.onSuccess) {
+          options.onSuccess(json)
+        }
       })
       .catch((error) => {
         setData(null)
         setError(error)
+        if (options.onError) {
+          options.onError(error)
+        }
       })
-      .finally(() => setLoading(false))
+      .finally(() => {
+        setLoading(false)
+      })
   }
 
   return {
@@ -51,7 +59,7 @@ export const useQuery = (url, options = {}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return { ...fetchData }
+  return { ...fetchData, mutate: () => fetchData.mutate(url, options) }
 }
 
 export const useMutation = useFetch

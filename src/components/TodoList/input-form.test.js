@@ -17,8 +17,8 @@ test('calls onSubmit prop when submitted', () => {
 
   // ASSERT
   expect(handleSubmit).toHaveBeenCalledTimes(1)
-  expect(inputEl).toHaveValue('test')
-  expect(submitEl).not.toHaveAttribute('disabled')
+  expect(inputEl).toHaveValue('')
+  expect(submitEl).toHaveAttribute('disabled', '')
 })
 
 test('not calls onSubmit prop when text is empty', () => {

@@ -12,6 +12,7 @@ export const TodoListInputForm = ({ onSubmit, isLoading }) => {
       onSubmit={(e) => {
         e.preventDefault()
         onSubmit(text)
+        setText('')
       }}
     >
       <input
